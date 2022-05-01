@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+head::-webkit-scrollbar {
+    width: 10px;
+}
+
+head::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+head::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+head::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    width: 100%;
+    
+}
+body::-webkit-scrollbar-thumb {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(180deg, #008f39 0%, #008f39 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #057933;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+.titulo {
+    font-size: 2.3rem;
+    padding-bottom: 0px;
+}
+
+.boton-hero{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: #008f39;
+}
+
+
+.logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 7rem;
+    width: 7rem;
+    border: 0px solid black;
+    border-radius: 50%;
+}
+.img-quienes-somos {
+    max-width: 100%;
+    max-height: 100%;
+}
+.imagen-quienes-somos {
+    height: 300px;
+    width: 300px;
+}
+section {
+    max-width: 1400px;
+    margin: auto;
+}
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+.header1{
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+}
+
+header .main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    justify-content:space-between;
+}
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 6rem;
+}
+.nav-logo2 {
+    display: flex;
+    
+}
+header a {
+    padding: 5px 0px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;    
+    font-family: 'Exo 2', sans-serif;
+    color: #008f39;
+}
+header p {
+padding: 10px;
+font-family: 'Exo 2', sans-serif;
+}
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 84.4vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/fernet.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#hero h1 {
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3.2rem;
+    padding-bottom: 50px;
+}
+.boton-hero {
+    font-family: 'Exo 2', sans-serif;
+}
+#hero .container1 {
+    padding-bottom: 200px;
+}
+#quienes-somos .container {
+    text-align: center;
+    padding: 200px 12px;
+    font-family: 'Exo 2', sans-serif;
+    
+}
+.somos-before::after {
+    display: block;
+    content: "Fernet La Roca";
+    color: #008f39;
+    padding-bottom: 12px;
+}
+
+#nuestros-productos {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    justify-content: center;
+    background-color: rgb(40, 40, 40);
+}
+.contenedor-nuestros-productos-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+}
+.card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #008f39;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+.card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+.card::after {
+    content: "LA ROCA";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 5em;
+    color: rgba(0, 0, 0, 0.2);
+}
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+.card .imgBox img {
+    max-width: 100%;
+    transition: .5s;
+}
+.card:hover .imgBox img {
+ max-width: 50%;
+        
+}
+.card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+.card .contentBox h3 {
+    font-size: 19px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+} 
+.card .contentBox .price {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.card .contentBox .buy {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #000000;
+    text-decoration: none;
+    background: #008f39;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.card:hover .contentBox .buy {
+    top: 0;
+    opacity: 1;
+}
+.mouse {
+    height: 300px;
+    width: auto;
+}
+.h2-nuestros-productos {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+#contacto {
+    background-color: #fff;
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+}
+.contact-info {
+    background-color: #008f39;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.contact-info h2 {
+    text-align: center;
+    padding: 20px 10px;
+}
+.contact-info h3 {
+    padding: 0px 20px;
+    font-size: 1.5rem;
+}
+.contact-info p {
+    padding: 20px 35px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    height: 400px;
+    justify-content: center;
+    background-color: #055a27;
+}
+.contact-form input {
+    height: 50px;
+    padding: 0px 20px;
+    margin-bottom: 25px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    outline: 0px solid #000000;
+}
+textarea {
+    margin-bottom: 25px;
+    height: 120px;
+    padding: 15px 20px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    resize: none;
+    outline: 0px solid #000000;
+}
+#submit {
+    margin: 0px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid #fff; 
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align:center;
+    margin: 0px 50px;
+}
+footer {
+    background-color: rgb(40, 40, 40);
+    color: #fff;
+    height: 100px;
+    display: flex;
+}
+.proximamente {
+    background-color: #fff;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1000px){
+    *{
+        display: none;
+
+    }
+    html{
+        display: flex;
+    }
+    body{
+        display: flex;
+    }
+    .proximamente{
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    .proximamente h2 {
+        display: block;
+        color: #000000;
+        padding-top: 100px;
+    }
+
+}
+
