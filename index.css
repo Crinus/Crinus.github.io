@@ -86,21 +86,16 @@ li{ font-size: 1.25em;}
     border: 0px solid black;
     border-radius: 50%;
 }
-.img-quienes-somos {
-    max-width: 100%;
-    max-height: 100%;
-}
-.imagen-quienes-somos {
-    height: 300px;
-    width: 300px;
-}
+
+
 section {
-    max-width: 1400px;
     margin: auto;
 }
 .container {
-    max-width: 1400px;
     margin: auto;
+}
+.header1 .container{
+    max-width: 1400px;
 }
 .header1{
     background-color: rgb(245, 245, 245);
@@ -166,7 +161,7 @@ font-family: 'Exo 2', sans-serif;
 }
 #quienes-somos .container {
     text-align: center;
-    padding: 200px 12px;
+    padding: 200px 50px;
     font-family: 'Exo 2', sans-serif;
     
 }
@@ -178,17 +173,25 @@ font-family: 'Exo 2', sans-serif;
 }
 
 #nuestros-productos {
-    display: flex;
-    max-width: 1400px;
-    margin: auto;
+    display: flex;  
     justify-content: center;
     background-color: rgb(40, 40, 40);
+    flex-direction: column;
 }
 .contenedor-nuestros-productos-1 {
     display: flex;
     flex-direction: column;
     padding: 0px;
     align-items: center;
+}
+.h2-nuestros-productos {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    height: min-content;
+    flex-direction: row;
+    padding-top: 10px;
 }
 .card {
     position: relative;
@@ -283,13 +286,6 @@ font-family: 'Exo 2', sans-serif;
     height: 300px;
     width: auto;
 }
-.h2-nuestros-productos {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 40px;
-    text-align: center;
-    color: #fff;
-}
 #contacto {
     background-color: #fff;
     color: #fff;
@@ -350,7 +346,7 @@ textarea {
     margin: 0px 50px;
 }
 footer {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(30, 30, 30);
     color: #fff;
     height: 100px;
     display: flex;
@@ -362,7 +358,7 @@ footer {
     height: 100%;
 }
 
-@media only screen and (min-width: 1000px){
+/*@media only screen and (min-width: 1000px){
     *{
         display: none;
 
@@ -385,4 +381,111 @@ footer {
     }
 
 }
+*/
+@media only screen and (min-width: 1280px) {
+    
+    #hero {
+        height: 88.4vh;
+        background-size: cover;
+    }
+    .contenedor-nuestros-productos-1 {
+        flex-direction: row;
+        justify-content: center;
+        padding: 40px;
+        box-sizing: content-box;
+    }
+    #nuestros-productos {  
+        justify-content: center;
+        background-color: rgb(40, 40, 40);
+        flex-direction: column;
+        align-items: center;
 
+    }
+    .h2-nuestros-productos {
+        flex-direction: column;
+        margin-bottom: 0px;
+        height: min-content;
+        width: fit-content;
+        padding-top: 40px;
+    }
+    .card {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    #quienes-somos .container {
+        padding: 200px 200px;
+    }
+    .container-contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(40, 40, 40);
+        padding-bottom: 50px;
+    }
+    .contact-form {
+        width: 40%;
+    }
+    .contact-info {
+        width: 40%;
+    }
+    footer {
+        background-color: rgb(30, 30, 30);
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    header .main-nav {
+        flex-direction: row;
+        justify-content:flex-start;
+    }
+    header nav {
+        flex-direction: row;
+        padding: 0px;
+        
+    }
+    header a {
+        padding: 0px;
+        justify-content: center;
+        margin: auto;
+        padding: 0px 30px;
+        font-size: 1.3rem;
+       
+    }
+    header p {
+        padding: 0px;
+        margin: auto;
+        margin-left: 20px;
+        margin-right: 28.7rem;
+
+    }
+    .titulo {
+        font-size: 3.5rem;
+    }
+    .logo-img {
+        margin: 0px;
+    }
+    #hero {
+        height: 88.4vh;
+        background-size: cover;
+    }
+}
+@media only screen and (min-width:721px) and (max-width:1400px) {
+    .titulo {
+        font-size: 3.5rem;
+    }
+    header a {
+        margin: 10px;
+        padding: 0px 10px;
+        font-size: 1.3rem;
+    }
+    header p {
+        margin: 0px;
+    }
+    header nav {
+       align-items: center;
+    }
+    #hero {
+        height: 88.4vh;
+        background-size: cover;
+    }
+}
